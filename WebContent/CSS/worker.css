@@ -1,0 +1,82 @@
+.button-style{
+	padding:5px;
+}
+.position{
+	margin:5px 160px;
+	width:100px;
+}
+#content{
+	width:800px;
+	min-height:400px;
+	border-radius:30px;
+	border:1px solid;
+	background-color:#F5F5DC;
+	margin:5% auto;
+}
+#query{
+	width:500px;
+	margin:5% auto;
+}
+.block{
+	width:400px;
+	margin:5% auto;
+	display:none;
+	border:1px solid;
+	border-radius:30px;
+}
+.block p{
+	margin:20px 70px;
+	margin-bottom:10px;
+	font-weight:bold;
+}
+.block input{
+	height:28px;
+	margin-top:2px;
+}
+.block label{
+	text-align:right;
+	display: inline-block;
+	width:160px;
+	margin-right:10px;
+}
+.block select{
+	width:60px;
+	margin-left:100px;
+	margin-right:6px;
+}
+#txtShow{
+	width:400px;
+	margin:20px auto;
+}
+#txtShow table{
+	width:400px;
+	border:1px solid gray;
+	border-collapse: collapse;
+}
+#txtShow table tr{
+	height:30px;
+}
+#txtShow table th{
+	border-bottom:1px solid gray;
+	width:80px;
+	text-align:center;
+}
+#txtShow table td{
+	width:80px;
+	text-align:center;
+}
+#addError{
+	text-align:center;
+	font-size:10px;
+	color:red;
+}
+#updateError{
+	text-align:center;
+	font-size:10px;
+	color:red;
+}
+#deleteError{
+	text-align:center;
+	font-size:10px;
+	color:red;
+}

@@ -62,7 +62,6 @@
 					<li><a href="Department.jsp">部门管理</a></li>
 					<li><a href="Staff.jsp">员工管理</a></li>
 					<li><a href="Employ.jsp">招聘管理</a></li>
-					<li><a href="Trainee.jsp">培训管理</a></li>
 					<li><a href="RPManage.jsp">奖惩管理</a></li>
 					<li><a href="Admin.jsp">系统管理</a></li>
 				</ul>

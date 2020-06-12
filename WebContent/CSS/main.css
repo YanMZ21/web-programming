@@ -58,6 +58,10 @@ ul{
 	width:100px;
 }
 
+#checked{
+	color:#C0C0C0;
+}
+
 #header{
 	height:120px;
 	width:100%;

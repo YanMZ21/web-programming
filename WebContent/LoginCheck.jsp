@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-		<title>主界面</title>
+		<title>密码比对</title>
 	</head>
 	<body>
 	<%
