@@ -35,13 +35,12 @@
  		
  		//以表格形式显示查询结果
  		response.getWriter().write("<table>");
- 		response.getWriter().write("<tr><th>记录号</th><th>员工号</th><th>奖惩数目</th><th>奖惩原因/th></tr>");
+ 		response.getWriter().write("<tr><th>记录号</th><th>员工号</th><th>奖惩数目</th></tr>");
  		while(rs.next()){
  			response.getWriter().write("<tr>");
  			response.getWriter().write("<td>"+rs.getString("rpID")+"</td>");
  			response.getWriter().write("<td>"+rs.getString("rpSID")+"</td>");
  			response.getWriter().write("<td>"+rs.getFloat("rpSalary")+"</td>");
- 			response.getWriter().write("<td>"+rs.getFloat("rpReason")+"</td>");
  			response.getWriter().write("</tr>");
  		}
  		response.getWriter().write("</table>");

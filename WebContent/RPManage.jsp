@@ -58,7 +58,6 @@
 			function deleteRP(){
 				var deleteID=document.getElementById("deleteID").value;
 				var xmlhttp=new XMLHttpRequest();
-				var message;
 				xmlhttp.onreadystatechange=function(){
 					if (xmlhttp.readyState==4 && xmlhttp.status==200)
 					{
@@ -66,7 +65,7 @@
 						window.location.reload();
 				    }
 				}
-				xmlhttp.open("GET","StaffChange/StaffDelete.jsp?sID="+deleteID,true);
+				xmlhttp.open("GET","RPChange/RPDelete.jsp?rpID="+deleteID,true);
 				xmlhttp.send();
 			}
 		</script>
@@ -111,7 +110,7 @@
 					<option value="rpSID">员工号</option>
 				</select>
 				<input type="text" id="values" style="height:28px;">
-				<input type="button" value="查询" onclick="queryRP" class="button-style">
+				<input type="button" value="查询" onclick="queryRP()" class="button-style">
 				<input  type="button" value="添加记录" onclick="showAdd()" class="button-style">
 				<input  type="button" value="删除记录" onclick="showDelete()" class="button-style">
 			</div>
@@ -129,10 +128,10 @@
 			</div>
 			<div id="delete" class="block">
 				<p>删除记录</p>
-				<label for="deleteID">要删除员工员工号:</label><input type="text" id="deleteID"><br/>
+				<label for="deleteID">要删除记录记录号:</label><input type="text" id="deleteID"><br/>
 				<div id="deleteError"></div>
 				<div class="position">
-					<input type="button" value="删除" class="button-style" onclick="deleteRP">
+					<input type="button" value="删除" class="button-style" onclick="deleteRP()">
 					<input type="button" value="取消" class="button-style" onclick="hideDelete()">
 				</div>
 			</div>

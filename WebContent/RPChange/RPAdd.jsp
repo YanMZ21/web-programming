@@ -19,7 +19,7 @@
 		//从Staff页面取值
 		String rpID=request.getParameter("rpID");
 		String rpSID=request.getParameter("rpSID");
-		String rpSalary=request.getParameter("rpSalary");
+		float rpSalary=Float.parseFloat(request.getParameter("rpSalary"));
 		
 		//数据库连接，此处数据库账户名为“root”，密码为123456
 		Class.forName("com.mysql.jdbc.Driver");
@@ -30,7 +30,7 @@
  		String querySQL1="select * from rp where rpID='"+rpID+"'";
  		ResultSet rs=stat.executeQuery(querySQL1);
  		if(rs.next()){//冲突，返回错误信息
- 			response.getWriter().write("*员工号已存在");
+ 			response.getWriter().write("*记录号已存在");
  		}
  		else{//不冲突，添加信息
  			response.getWriter().write("");
@@ -39,9 +39,13 @@
  			String querySQL2="select * from staff where sID='"+rpSID+"'";
  			rs=stat.executeQuery(querySQL2);
  			if(rs.next()){
-	 			float salary=rs.getFloat("sSalary");
-	 			salary+=Float.parseFloat(rpSalary);
-	 			String updateSQL="update staff set sSalary='"+salary+"' where sID='"+rpSID+"'";
+ 				float salary=rs.getFloat("sSalary");
+	 			//response.getWriter().write(Float.toString(salary));
+	 			salary+=rpSalary;
+	 			//response.getWriter().write(Float.toString(salary));
+	 			String sSalary=Float.toString(salary);
+	 			String updateSQL="update staff set sSalary='"+sSalary+"' where sID='"+rpSID+"'";
+	 			stat.executeUpdate(updateSQL);
  			}
  		}
  		
